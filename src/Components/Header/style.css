@@ -1,0 +1,25 @@
+header {
+  align-items: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  color: white;
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
+  font-weight: bolder;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.flex-item {
+  width: 400px;
+}
+
+.flex-item p {
+  text-align: center;
+  width: 400px;
+}
+
+.buttons-conteiner {
+  display: flex;
+  justify-content: flex-end;
+}
