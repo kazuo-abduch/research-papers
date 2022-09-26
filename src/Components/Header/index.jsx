@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '../Button';
 import './style.css';
 
 function Header(props) {
@@ -13,6 +14,7 @@ function Header(props) {
           { title }
         </p>
       </div>
+      <Button className='burger-menu' />
     </header>
   )
 }
