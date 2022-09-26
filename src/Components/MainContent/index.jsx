@@ -1,10 +1,13 @@
 import React from 'react';
+import Filter from '../Filter';
+import TableList from '../TableList';
 import './style.css'
 
 function MainContent() {
   return (
     <div className={ 'content' }>
-      Conteudo
+      <Filter />
+      <TableList />
     </div>
   )
 }
