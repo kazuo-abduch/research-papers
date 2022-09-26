@@ -7,10 +7,10 @@ import './style.css';
 function Home() {
   return (
     <>
-      <Header title="HOME" hasLogin={ true }/>
+      <Header title="HOME"/>
       <div className='main'>
-        <SideMenu />
         <MainContent />
+        <SideMenu />
       </div>
     </>
   )
