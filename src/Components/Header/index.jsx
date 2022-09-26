@@ -1,26 +1,8 @@
 import React from 'react';
-import Button from '../Button';
 import './style.css';
 
-function renderLoginButtons() {
-  return (
-    <div className='flex-item buttons-conteiner'>
-      <Button title={ 'Login' } className={ 'header-button' } />
-      <Button title={ 'Cadastro' } className={ 'header-button' } />
-    </div>
-  )
-}
-
-function renderLogoutButton() {
-  return (
-    <div className='flex-item buttons-conteiner'>
-      <Button title={ 'Logout' } className={ 'header-button' } />
-    </div>
-  )
-}
-
 function Header(props) {
-  const { title, hasLogin } = props
+  const { title } = props
   return (
     <header className='header-conteiner'>
       <div className='flex-item'>
@@ -31,7 +13,6 @@ function Header(props) {
           { title }
         </p>
       </div>
-      { hasLogin ? renderLogoutButton() : renderLoginButtons() }
     </header>
   )
 }
