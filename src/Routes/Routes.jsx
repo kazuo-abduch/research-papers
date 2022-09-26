@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Home from '../Pages/Home/Home';
-import Favorites from '../Pages/Favorites/Favorites';
+import Home from '../Pages/Home';
+import Favorites from '../Pages/Favorites';
 
 class RoutesFile extends React.Component {
   render() {
