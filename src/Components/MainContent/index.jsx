@@ -15,7 +15,7 @@ function MainContent() {
     }
     requestDocuments();
     console.log(docList)
-  }, [])
+  }, [docList])
 
   return (
     <div className={ 'content' }>
