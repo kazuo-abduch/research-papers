@@ -16,7 +16,7 @@ function MainContent() {
     }
     setLoad(false);
     requestDocuments();
-  }, [])
+  }, [setDocList, setLoad])
 
   return (
     <div className={ 'content' }>
