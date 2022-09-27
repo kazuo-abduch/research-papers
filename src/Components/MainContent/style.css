@@ -1,4 +1,5 @@
 .content {
   background-color: white;
+  overflow: scroll;
   width: 100vw;
 }
