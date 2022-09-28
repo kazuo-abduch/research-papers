@@ -5,6 +5,7 @@ function PostListProvider({ children }) {
   const [docList, setDocList] = useState();
   const [favoriteList, setFavList] = useState();
   const [loading, setLoad] = useState(true);
+  const [pageState, setPage] = useState(1);
 
   return (
     <ResearchContext.Provider
@@ -15,6 +16,8 @@ function PostListProvider({ children }) {
         setFavList,
         loading,
         setLoad,
+        pageState,
+        setPage,
       } }
     >
       { children }

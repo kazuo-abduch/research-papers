@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import ResearchContext from '../../Context/ResearchContext';
 import Filter from '../Filter';
 import DocList from '../DocList';
+import PageNumbersInput from '../PageNumbersInput';
 import { fetchDocuments } from '../../Services/api';
 import './style.css'
 
@@ -22,6 +23,7 @@ function MainContent() {
     <div className={ 'content' }>
       <Filter />
       <DocList />
+      <PageNumbersInput />
     </div>
   )
 }
