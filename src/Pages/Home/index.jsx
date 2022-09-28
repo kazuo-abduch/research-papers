@@ -6,13 +6,13 @@ import './style.css';
 
 function Home() {
   return (
-    <>
+    <div className='body-conteiner'>
       <Header title="HOME"/>
       <div className='main'>
         <MainContent />
         <SideMenu />
       </div>
-    </>
+    </div>
   )
 }
 

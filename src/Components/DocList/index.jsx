@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import ResearchContext from '../../Context/ResearchContext';
 import DocCard from './DocCard';
 import mockDocList from '../../Mock/apiMock.json';
+import './style.css';
 
 function DocList() {
   
@@ -23,7 +24,7 @@ function DocList() {
   }
 
   return (
-    <div>
+    <div className='content-conteiner' >
       { renderDocList() }
     </div>
   )
