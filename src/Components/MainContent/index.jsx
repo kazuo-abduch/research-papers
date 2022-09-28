@@ -8,16 +8,16 @@ import './style.css'
 
 function MainContent() {
 
-  const { setDocList, setLoad } = useContext(ResearchContext);
+  const { setDocList, setLoad, pageState } = useContext(ResearchContext);
 
   useEffect(() => {
     const requestDocuments = async () => {
-      const requestResult = await fetchDocuments()
+      const requestResult = await fetchDocuments(pageState)
       setDocList(requestResult)
     }
     setLoad(false);
     requestDocuments();
-  }, [setDocList, setLoad])
+  }, [setDocList, setLoad, pageState])
 
   return (
     <div className={ 'content' }>
