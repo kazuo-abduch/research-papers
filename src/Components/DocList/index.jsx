@@ -1,20 +1,20 @@
 import React, { useContext } from 'react';
 import ResearchContext from '../../Context/ResearchContext';
 import DocCard from './DocCard';
-import mockDocList from '../../Mock/apiMock.json';
 import './style.css';
 
-function DocList() {
+function DocList(props) {
+
+  const { documentList } = props
   
   const {
-    //docList,
     loading,
   } = useContext(ResearchContext)
 
   const renderDocList = () => {
     if (!loading) {
       return (
-        mockDocList[0].data.map((doc, index) => {
+        documentList.map((doc, index) => {
           return (
             <DocCard key={ index } document={ doc }/>
           )

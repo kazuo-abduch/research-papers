@@ -3,6 +3,7 @@ import ResearchContext from '../../Context/ResearchContext';
 import DocList from '../DocList';
 import PageNumbersInput from '../PageNumbersInput';
 import { fetchDocuments } from '../../Services/api';
+import mockDocList from '../../Mock/apiMock.json';
 import './style.css'
 
 function MainContent() {
@@ -21,7 +22,7 @@ function MainContent() {
   return (
     <div className={ 'content' }>
       <PageNumbersInput />
-      <DocList />
+      <DocList documentList={ mockDocList[0].data } />
       <PageNumbersInput />
     </div>
   )
