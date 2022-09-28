@@ -11,7 +11,6 @@ function DocList() {
   } = useContext(ResearchContext)
 
   const renderDocList = () => {
-    console.log(mockDocList[0].data)
     if (!loading) {
       return (
         mockDocList[0].data.map((doc, index) => {
