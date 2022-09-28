@@ -3,6 +3,7 @@ header {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   color: white;
   display: flex;
+  height: 72px;
   font-family: 'Montserrat', sans-serif;
   font-size: 26px;
   font-weight: bolder;

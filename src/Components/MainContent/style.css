@@ -1,5 +1,6 @@
 .content {
   background-color: white;
   overflow: scroll;
+  overflow-x: hidden;
   width: 100vw;
 }

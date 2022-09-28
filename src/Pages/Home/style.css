@@ -1,4 +1,10 @@
+.body-conteiner {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 .main {
   display: flex;
-  height: 100vh;
+  height: 90%;
 }
