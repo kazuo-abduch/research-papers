@@ -8,7 +8,7 @@ function DocCard(props) {
     return authors.map((author, index) => {
       return (
         <span key={ index }>
-          {author.name}
+          { author }
         </span>
       )
     })
