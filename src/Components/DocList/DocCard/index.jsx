@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.css';
 
 function DocCard(props) {
   
@@ -17,20 +18,33 @@ function DocCard(props) {
   const renderUrls = () => {
     return urls.map((url, index) => {
       return (
-        <span key={ index }>
+        <div key={ index }>
+          <span>Url: </span>
           { url }
-        </span>
+        </div>
       )
     })
   }
 
   return (
     <div className='doc-card'>
-      <div> { _type } </div>
-      <div> { title } </div>
-      <div> { description } </div>
-      <div> { renderNames() } </div>
-      <div> { renderUrls() } </div>
+      <div>
+        <span>Type: </span>
+        { _type }
+      </div>
+      <div>
+        <span>Title: </span>
+        { title }
+      </div>
+      <div>
+        <div>Description: </div>
+        { description }
+      </div>
+      <div>
+        <div>Authors: </div>
+        { renderNames() }
+      </div>
+      { renderUrls() }
     </div>
   )
 }
