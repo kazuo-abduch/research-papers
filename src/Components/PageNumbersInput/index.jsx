@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import ResearchContext from '../../Context/ResearchContext';
+import './style.css';
 
 function PageNumbersInput() {
 
@@ -17,9 +18,9 @@ function PageNumbersInput() {
 
   return (
     <div className='page-input'>
-      <input type="button" value="<" onClick={ subPage }/>
-      <input type="number" value={ pageState }/>
-      <input type="button" value=">" onClick={ addPage } />
+      <input type="button" className="page-button" value="<" onClick={ subPage }/>
+      <input type="number" className="page-number" value={ pageState }/>
+      <input type="button" className="page-button" value=">" onClick={ addPage } />
     </div>
   )
 }
