@@ -1,6 +1,12 @@
 .doc-card {
   border: 1px solid black;
   border-radius: 9px;
+  display: flex;
+  justify-content: space-between;
   padding: 5px;
   margin-bottom: 15px;
+}
+
+.fav-button {
+  height: 25px;
 }
