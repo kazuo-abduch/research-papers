@@ -2,7 +2,7 @@ import React from 'react';
 
 function DocCard(props) {
   
-  const { authors, downloadUrl, documentType, title, abstract } = props.document
+  const { _type, _source: { authors, description, title, urls } } = props.document
   
   const renderNames = () => {
     return authors.map((author, index) => {
@@ -14,13 +14,23 @@ function DocCard(props) {
     })
   }
 
+  const renderUrls = () => {
+    return urls.map((url, index) => {
+      return (
+        <span key={ index }>
+          { url }
+        </span>
+      )
+    })
+  }
+
   return (
     <div className='doc-card'>
-      <div> { documentType } </div>
+      <div> { _type } </div>
       <div> { title } </div>
-      <div> { abstract } </div>
+      <div> { description } </div>
       <div> { renderNames() } </div>
-      <div> { downloadUrl } </div>
+      <div> { renderUrls() } </div>
     </div>
   )
 }

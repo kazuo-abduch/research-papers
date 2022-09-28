@@ -11,10 +11,10 @@ function DocList() {
   } = useContext(ResearchContext)
 
   const renderDocList = () => {
+    console.log(mockDocList[0].data)
     if (!loading) {
       return (
-        mockDocList.map((doc, index) => {
-          console.log(doc.authors)
+        mockDocList[0].data.map((doc, index) => {
           return (
             <DocCard key={ index } document={ doc }/>
           )

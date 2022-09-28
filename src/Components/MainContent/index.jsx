@@ -21,7 +21,7 @@ function MainContent() {
   return (
     <div className={ 'content' }>
       <Filter />
-      <DocList/>
+      <DocList />
     </div>
   )
 }
