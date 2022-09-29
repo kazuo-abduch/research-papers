@@ -1,15 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './style.css'
 
 function MenuButton(props) {
-  const { title, className } = props
+  const { title } = props
+  const linkObj = {
+    HOME: '/',
+    FAVORITES: '/favorites',
+  }
+
   return (
-    <div className='menu-button'>
-      <img className={ className } alt="" />
-      <p>
-        { title }
-      </p>
-    </div>
+    <Link to={ linkObj[title] }>
+      <div className='menu-button'>
+          <p>
+            { title }
+          </p>
+      </div>
+    </Link>
   )
 }
 

@@ -5,8 +5,8 @@ import './style.css'
 function SideMenu() {
   return (
     <nav className='menu-conteiner'>
-      <MenuButton title={ 'HOME' } className={ 'home' } />
-      <MenuButton title={ 'FAVORITES' } className={ 'favorites' } />
+      <MenuButton title={ 'HOME' } />
+      <MenuButton title={ 'FAVORITES' } />
     </nav>
   )
 }

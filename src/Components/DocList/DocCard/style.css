@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   padding: 5px;
-  margin-bottom: 15px;
+  margin: 15px 0;
 }
 
 .fav-button {
