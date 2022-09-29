@@ -38,7 +38,7 @@ function MainContent() {
     }
   }
 
-  const checkIfLoading = () => loading ? <div>Loading</div> : <DocList documentList={ favListChunks[currentPage - 1] }/>
+  const renderIfLoading = () => loading ? <div>Loading</div> : <DocList documentList={ favListChunks[currentPage - 1] }/>
 
   return (
     <div className={ 'content' }>
@@ -47,7 +47,7 @@ function MainContent() {
         addPage={ addPage }
         pageState={ currentPage }
       />
-      { favoriteList.length >= 1 ? checkIfLoading() : <div>Lista Vazia</div> }
+      { favoriteList.length >= 1 ? renderIfLoading() : <div>Lista Vazia</div> }
       <PageNumbersInput
         subPage={ subPage }
         addPage={ addPage }
