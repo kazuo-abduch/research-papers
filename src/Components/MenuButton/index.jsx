@@ -10,13 +10,13 @@ function MenuButton(props) {
   }
 
   return (
-    <Link to={ linkObj[title] }>
-      <div className='menu-button'>
+    <div className='menu-button'>
+      <Link to={ linkObj[title] }>
           <p>
             { title }
           </p>
-      </div>
-    </Link>
+      </Link>
+    </div>
   )
 }
 

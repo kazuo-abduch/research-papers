@@ -1,5 +1,4 @@
 .menu-button {
-  align-items:center;
   display: flex;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
@@ -7,17 +6,22 @@
   flex-direction: row;
   flex-wrap: nowrap;
   line-height: 2.8rem;
-  padding:2% 0 2% 10%;
+  padding:2% 0 2% 2%;
   cursor: pointer;
   transition: .5s ease-in-out;
   width: 90%;
 }
 
 .menu-button p {
+  text-align: center;
   color: white;
   height: 3rem;
   padding-top: .6rem;
   padding-left: .6rem;
+}
+
+.menu-button a {
+  width: 100%;
 }
 
 .menu-button:hover{

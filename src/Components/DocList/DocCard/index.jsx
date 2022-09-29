@@ -36,7 +36,7 @@ function DocCard(props) {
       return (
         <div key={ index }>
           <span>Url: </span>
-          { url }
+          <a href={ url } target="_blank" rel="noreferrer">{ url }</a>
         </div>
       )
     })
