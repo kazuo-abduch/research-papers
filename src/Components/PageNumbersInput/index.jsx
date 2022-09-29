@@ -8,7 +8,7 @@ function PageNumbersInput(props) {
   return (
     <div className='page-input'>
       <input type="button" className="page-button" value="<" onClick={ subPage }/>
-      <input type="number" className="page-number" value={ pageState }/>
+      <input type="number" className="page-number" value={ pageState } readOnly />
       <input type="button" className="page-button" value=">" onClick={ addPage } />
     </div>
   )

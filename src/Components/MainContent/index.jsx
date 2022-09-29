@@ -10,6 +10,7 @@ function MainContent() {
   const { setDocList, docList, setLoad, loading, pageState, setPage } = useContext(ResearchContext);
 
   useEffect(() => {
+    setLoad(true);
     const requestDocuments = async () => {
       const requestResult = await fetchDocuments(pageState)
       setDocList(requestResult)
