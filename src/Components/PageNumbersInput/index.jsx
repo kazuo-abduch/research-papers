@@ -1,20 +1,9 @@
-import React, { useContext } from 'react';
-import ResearchContext from '../../Context/ResearchContext';
+import React from 'react';
 import './style.css';
 
-function PageNumbersInput() {
+function PageNumbersInput(props) {
 
-  const { pageState, setPage } = useContext(ResearchContext);
-
-  const addPage = () => {
-    setPage(pageState + 1);
-  }
-
-  const subPage = () => {
-    if (pageState > 1) {
-      setPage(pageState - 1);
-    }
-  }
+  const { addPage, subPage, pageState } = props;
 
   return (
     <div className='page-input'>

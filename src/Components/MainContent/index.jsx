@@ -3,27 +3,51 @@ import ResearchContext from '../../Context/ResearchContext';
 import DocList from '../DocList';
 import PageNumbersInput from '../PageNumbersInput';
 import { fetchDocuments } from '../../Services/api';
-import mockDocList from '../../Mock/apiMock.json';
 import './style.css'
 
 function MainContent() {
 
-  const { setDocList, setLoad, pageState } = useContext(ResearchContext);
+  const { setDocList, docList, setLoad, loading, pageState, setPage } = useContext(ResearchContext);
 
   useEffect(() => {
     const requestDocuments = async () => {
       const requestResult = await fetchDocuments(pageState)
       setDocList(requestResult)
     }
-    setLoad(false);
-    requestDocuments();
+    requestDocuments().then(() => {
+      setLoad(false);
+    });
   }, [setDocList, setLoad, pageState])
+
+  const addPage = () => {
+    setLoad(true)
+    setPage(pageState + 1);
+  }
+
+  const subPage = () => {
+    if (pageState > 1) {
+      setLoad(true)
+      setPage(pageState - 1);
+    }
+  }
 
   return (
     <div className={ 'content' }>
-      <PageNumbersInput />
-      <DocList documentList={ mockDocList[0].data } />
-      <PageNumbersInput />
+      <PageNumbersInput
+        subPage={ subPage }
+        addPage={ addPage }
+        pageState={ pageState }
+      />
+      {
+        loading
+        ? <div>Loading</div>
+        : <DocList documentList={ docList }/>
+      }
+      <PageNumbersInput
+        subPage={ subPage }
+        addPage={ addPage }
+        pageState={ pageState }
+      />
     </div>
   )
 }
