@@ -69,19 +69,19 @@ function DocCard(props) {
   return (
     <div className='doc-card'>
       <div>
-        <div>
+        <div id='type-id'>
           <span>Type: </span>
           { _type }
         </div>
-        <div>
+        <div id='title-id'>
           <span>Title: </span>
           { title }
         </div>
-        <div>
+        <div id='description-id'>
           <div>Description: </div>
           { description }
         </div>
-        <div>
+        <div id='authors-id'>
           <div>Authors: </div>
           { renderNames() }
         </div>
