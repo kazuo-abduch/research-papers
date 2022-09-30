@@ -17,6 +17,8 @@ function MainContent() {
     }
     requestDocuments().then(() => {
       setLoad(false);
+    }).catch(() => {
+      console.log('Api fora do ar');
     });
   }, [setDocList, setLoad, pageState])
 
