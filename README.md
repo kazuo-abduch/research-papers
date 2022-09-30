@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# Busca por projetos e pesquisas usando CORE API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Sobre o projeto
 
-## Available Scripts
+O intuito deste projeto é possibilitar a busca por artigos científicos usando a API do portal CORE permitindo o usuário salvar uma lista de artigos escolhidos.
 
-In the project directory, you can run:
+## Guia de uso
 
-### `npm start`
+O uso do aplicativo é direto e simples. Na tela de inicio a aplicação já fará a solicitação para a API e renderizará os artigos buscados. Apertando os botões `<` e `>` mudará a página para trás e para frente respectivamente trazendo ainda mais artigos.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Imagem da aplicação](/imagesReadme/Aplication.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Ao clicar na `url` você será redirecionado para o site onde o artigo está armazenado para leitura.
+Clicando o botão de estrela, ela ficará azul representando o artigo favoritado que pode ser visto separadamente clicando no botão ao lado `FAVORITES`.
+Para retorar a página inicial basta clicar no botão `HOME`.
 
-### `npm test`
+## Tecnologias
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend
+React.js
+React router
+Hooks e Context
 
-### `npm run build`
+Essas tecnologias foram consideradas para componentização da aplicação e para desenvolver uma aplicação de mais de uma página. Pela pouca quantidade de componentes, optei pelo uso de Hooks e Context Api para comunicação entre os componentes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Antes de começar
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Instalação
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Clone o repositório em sua máquina local
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+git clone git@github.com:kazuo-abduch/gestao-conteudo.git
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Instale as dependências para iniciar o projeto em seu navegador e testá-lo usando cypress
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```sh
+npm install
+```
 
-## Learn More
+### API CORE
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Para que a requisição possa ser feita, é necessário uma chave de autenticação chamada de `REACT_APP_API_KEY=` salva em uma variável de ambiente.
+Para que a aplicação funcione localmente, é necessário solicitar a sua chave através do site https://core.ac.uk/services/api
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Após obter sua chave, salve-a na variável de ambiente localizada no arquivo `example.env` com a estrutura abaixo e remova a palavra `example` do nome do arquivo para que fique apenas `.env`.
 
-### Code Splitting
+```
+REACT_APP_API_KEY="sua chave aqui"
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+>> Não se preocupe, o arquivo está referenciado no `.gitignore` e não será salvo em seu repositório remoto.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Iniciando a aplicação
 
-### Making a Progressive Web App
+### Frontend
+Acesse o diretório do frontend e inicie a aplicação react com o comando
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```sh
+npm start
+```
 
-### Advanced Configuration
+## Iniciando os teste com CYPRESS
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```sh
+npx cypress open
+```
 
-### Deployment
+Este comando abrirá um cliente separado do Cypress.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+![Imagem do cliente do cypress](/imagesReadme/CYPRESS_client.png)
 
-### `npm run build` fails to minify
+Escolha a opção E2E Testing e clique no botão `Start E2E Testing in Chrome`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Clique no arquivo `spec.cy.js` para iniciar os testes já implementados neste arquivo
+
+![Imagem do cypress rodando no google chrome](/imagesReadme/CYPRESS_spec.png)
